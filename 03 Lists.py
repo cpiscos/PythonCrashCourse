@@ -74,4 +74,3 @@ places_to_visit.sort()
 print(places_to_visit)
 places_to_visit.sort()
 print(places_to_visit)
-
