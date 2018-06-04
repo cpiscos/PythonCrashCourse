@@ -39,7 +39,7 @@ class Restaurant():
         self.cuisine = cuisine
 
     def describe_restaurant(self):
-        print(self.name.title() + ' serves ' + self.cuisine.title())
+        print('We are ' + self.name.title() + 'and we serve ' + self.cuisine.title())
 
     def open_restaurant(self):
         print(self.name.title() + ' is open!')
@@ -77,11 +77,18 @@ class Restaurant():
 #     print()
 #     user.greet_user()
 
+
 class IceCreamStand(Restaurant):
     def __init__(self, name, cuisine='ice cream'):
         super().__init__(name, cuisine)
         self.flavors = []
 
     def show_flavors(self):
+        print('Here are the our available flavors: ')
+        for each_flavor in self.flavors:
+            print('-' + each_flavor.title())
 
-
+neilsons = IceCreamStand('neilsons')
+neilsons.flavors = ['vanilla', 'rocky road', 'chocolate']
+neilsons.describe_restaurant()
+neilsons.show_flavors()
